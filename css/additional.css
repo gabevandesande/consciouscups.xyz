@@ -3,6 +3,10 @@ body {
     width: 100vw;
 }
 
+audio {
+    z-index: 3 !important;
+}
+
 a, a:hover {
     color: white;
 }
@@ -152,4 +156,20 @@ a>.instagram:hover {
     -o-transition: all .1s ease-out;
     transition: all .1s ease-out;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#mute-btn, #unmute-btn {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mute-btn {
+    display: none;
+}
+
+.sound-ctrl {
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
