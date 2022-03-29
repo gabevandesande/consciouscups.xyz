@@ -1,0 +1,10 @@
+#bridge {
+    display: block;
+    margin: 0 auto;
+    background-image: url('../assets/img/draw-bg-2.jpeg');
+    background-size: cover;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    cursor:  crosshair;
+}
