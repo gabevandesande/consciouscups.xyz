@@ -16,13 +16,20 @@ window.onload = function() {
 //     mask.setAttribute("cx", (upX) + 'px');
 // });
 
-$('.btn-join').hover(function() {
-   $('.social-container').show()
-  });
+if ($(window).width() > 820){
+    $('.btn-join').hover(function() {
+        $('.social-container').show()
+       });
+     
+     $('.social-container').mouseleave(function() {
+         $('.social-container').hide()
+     });
+} else{
+    $('.btn-join').click(function() {
+        $('.social-container-mobile').show()
+       });
+}
 
-$('.social-container').mouseleave(function() {
-    $('.social-container').hide()
-});
 
 var firstMute = true;
 var player = document.getElementById("player")

@@ -29,24 +29,40 @@ a>.instagram:hover {
     height: 10vh;
     top: 0;
     left: 0;
-    padding-left: 30px;
-    padding-top: 30px;
+    padding-left: 15px;
+    padding-top: 15px;
     text-align: left;
     display: flex;
-   align-items:center;
+    align-items: center;
 }
+
+@media screen and (min-width: 1100px) {
+    .nav-bar {
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+}
+
 
 .cc-logo {
     height: 10vh;
     width: calc(10vh);
 }
 
+
 .logo-text {
-    font-size: 6vh;
+    font-size: 32px;
     color: white;
-    padding-left: 30px;
+    padding-left: 15px;
     text-shadow: 5px 5px 4px #7B4436;
     font-weight: bolder;
+}
+
+@media screen and (min-width: 1100px) {
+    .logo-text {
+        font-size: 6vh;
+        padding-left: 30px;
+    }
 }
 
 .pic {
@@ -83,9 +99,34 @@ a>.instagram:hover {
     z-index: 0;
 }
 
+.social-container-mobile {
+    display: none;
+}
+
 .social-btn.btn2 {
     padding-block: 30px;
 }
+
+.middle-btn-mobile {
+    padding-inline: 30px;
+}
+
+@media screen and (max-width: 825px) {
+    .social-container-mobile {
+        padding-left: 0px;
+        display: none;
+        animation: createBox .25s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: calc(30% - 79px);
+        z-index: 0;
+    }
+}
+
+
 
 @keyframes createBox {
     from {
@@ -170,6 +211,13 @@ a>.instagram:hover {
 
 .sound-ctrl {
     position: absolute;
-    top: 30px;
+    bottom: 30px;
     right: 30px;
+}
+
+@media screen and (min-width: 1100px) {
+    .sound-ctrl {
+        top: 30px;
+        bottom: auto;
+    }
 }
