@@ -12,7 +12,7 @@ setVisible('.pic', false);
 setVisible('#loading', true);
 
 document.addEventListener('DOMContentLoaded', () =>
-    wait(3000).then(() => {
+    wait(4000).then(() => {
         setVisible('.pic', true);
         setVisible('#loading', false);
     }));
