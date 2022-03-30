@@ -29,15 +29,16 @@ if ($(window).width() > 820) {
     $('.pic').mousemove(function (event) {
 
         var brJoin = document.getElementById("btnJoin").getBoundingClientRect();
-        brSocials = document.getElementById("socialContainer").getBoundingClientRect();
+        brDiscord = document.getElementById("discord").getBoundingClientRect();
+        brInstagram = document.getElementById("instagram").getBoundingClientRect();
         minX = brJoin.left;
-        maxX = brJoin.right;
+        maxX = brDiscord.left;
         minY = brJoin.top;
         maxY = brJoin.bottom;
-        minX2 = brSocials.left;
-        maxX2 = brSocials.right;
-        minY2 = brSocials.top;
-        maxY2 = brSocials.bottom;
+        minX2 = brDiscord.left;
+        maxX2 = brDiscord.right;
+        minY2 = brDiscord.top;
+        maxY2 = brInstagram.bottom;
         mask = $('#mask1 circle')[0];
         upX = event.clientX;
         upY = event.clientY;

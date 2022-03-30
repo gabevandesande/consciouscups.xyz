@@ -92,7 +92,8 @@
     </video>
     <div class="pic">
         <!-- Page Content-->
-        <div class="sound-ctrl-mobile"> <a id="mute-btn-mobile" class="mute-btn"> <i class="fa-solid fa-3x fa-volume-high"></i></a>
+        <div class="sound-ctrl-mobile"> <a id="mute-btn-mobile" class="mute-btn"> <i
+                    class="fa-solid fa-3x fa-volume-high"></i></a>
             <a id="unmute-btn-mobile" class="unmute-btn"> <i class="fa-solid fa-3x fa-volume-xmark"></i></a>
         </div>
 
@@ -115,7 +116,7 @@
                 <fegaussianblur stdDeviation="5" />
             </filter>
             <mask id="mask1">
-                <circle cx="-50%" cy="-50%" r="12%" fill="white" filter="url(#filter2)" id="maskCircle"/>
+                <circle cx="-50%" cy="-50%" r="12%" fill="white" filter="url(#filter2)" id="maskCircle" />
             </mask>
             <image xlink:href="./assets/img/draw-bg-2.jpeg" mask="url(#mask1)" id="under-img"></image>
         </svg>
@@ -123,7 +124,7 @@
         <div class="social-container" id="socialContainer">
             <div class="social-btn btn1">
                 <a href="https://discord.gg/cb6Mdp7T" target="_blank">
-                    <i class="fa-brands fa-discord fa-4x discord"></i> </a>
+                    <i class="fa-brands fa-discord fa-4x discord" id="discord"></i> </a>
             </div>
             <div class="social-btn btn2">
                 <a href="https://twitter.com/ConsciousCups?s=20&t=r0R57NSpBVyFNH5c_C8fRw" target="_blank">
@@ -132,9 +133,10 @@
             </div>
             <div class="social-btn btn3">
                 <a href="https://www.instagram.com/consciouscupsnft/" target="_blank">
-                    <i class="fa-brands fa-instagram fa-4x instagram"></i> </a>
+                    <i class="fa-brands fa-instagram fa-4x instagram" id="instagram"></i> </a>
                 </a>
             </div>
+
         </div>
         <div class="social-container-mobile">
             <a href="https://discord.gg/cb6Mdp7T" target="_blank">
