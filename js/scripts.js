@@ -17,12 +17,27 @@ document.addEventListener('DOMContentLoaded', () =>
         setVisible('#loading', false);
     }));
 
+
+function bgImgResize() {
+    if ($(window).height() > $(window).width()) {
+        $('#under-img').css("height", "100vh");
+        $('#under-img').css("width", "auto");
+    }
+    else {
+        $('#under-img').css("width", "100vw")
+        $('#under-img').css("height", "auto");
+
+    }
+}
+
+
 window.onload = function () {
-    if ($(window).height() > $(window).width())
-        $('#under-img').css("height", "100%")
-    else
-        $('#under-img').css("width", "100%")
+    bgImgResize();
 };
+
+$(window).resize(function () {
+    bgImgResize();
+})
 
 // Reveal drawing on hover (>820)
 if ($(window).width() > 820) {
@@ -106,6 +121,5 @@ $('#mute-btn-mobile').click(function () {
     $('#mute-btn-mobile').hide();
     $('#unmute-btn-mobile').show();
 })
-
 
 
