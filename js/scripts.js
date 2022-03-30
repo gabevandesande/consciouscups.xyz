@@ -12,7 +12,7 @@ setVisible('.pic', false);
 setVisible('#loading', true);
 
 document.addEventListener('DOMContentLoaded', () =>
-    wait(3000).then(() => {
+    wait(20000).then(() => {
         setVisible('.pic', true);
         setVisible('#loading', false);
     }));
@@ -24,32 +24,33 @@ window.onload = function () {
         $('#under-img').css("width", "100%")
 };
 
-// Reveal drawing on hover
+// Reveal drawing on hover (>820)
+if ($(window).width() > 820) {
+    $('.pic').mousemove(function (event) {
+        var offset = window.innerWidth * 0.06 + 150
+        var minX = window.innerWidth / 2 - offset;
+        var maxX = window.innerWidth / 2 + offset;
+        var minY = window.innerHeight / 2 - offset - 75;
+        var maxY = window.innerHeight / 2 + offset - 75;
+        event.preventDefault();
+        var mask = $('#mask1 circle')[0];
 
-$('.pic').mousemove(function (event) {
-    var offset = window.innerWidth * 0.06 + 150
-    var minX = window.innerWidth / 2 - offset;
-    var maxX = window.innerWidth / 2 + offset;
-    var minY = window.innerHeight / 2 - offset - 75;
-    var maxY = window.innerHeight / 2 + offset - 75;
-    console.log(minX, maxX, minY, maxY)
-    event.preventDefault();
-    var mask = $('#mask1 circle')[0];
-
-    var upX = event.clientX;
-    var upY = event.clientY;
+        var upX = event.clientX;
+        var upY = event.clientY;
 
 
-    if (upX < minX || upX > maxX || upY < minY || upY > maxY) {
-        $('#maskCircle').fadeIn('fast');
-        mask.setAttribute("cy", (upY - 5) + 'px');
-        mask.setAttribute("cx", (upX) + 'px');
-    } else {
-        $('#maskCircle').fadeOut('fast');
-    }
+        if (upX < minX || upX > maxX || upY < minY || upY > maxY) {
+            $('#maskCircle').fadeIn('fast');
+            mask.setAttribute("cy", (upY - 5) + 'px');
+            mask.setAttribute("cx", (upX) + 'px');
+        } else {
+            $('#maskCircle').fadeOut('fast');
+        }
 
-});
+    });
+}
 
+// Join hover effects
 if ($(window).width() > 820) {
     $('.btn-join').hover(function () {
         $('.social-container').show()
@@ -64,7 +65,7 @@ if ($(window).width() > 820) {
     });
 }
 
-
+// Mute / unmute
 var firstMute = true;
 var player = document.getElementById("player")
 $('#unmute-btn').click(function () {
@@ -83,8 +84,6 @@ $('#mute-btn').click(function () {
     $('#mute-btn').hide();
     $('#unmute-btn').show();
 })
-
-
 
 $('#un-mute').click(function () {
     console.log($('#un-mute').val())

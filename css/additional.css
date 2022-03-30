@@ -278,6 +278,12 @@ a>.instagram:hover {
     position: absolute;
     bottom: 30px;
     right: 30px;
+    text-shadow: 5px 5px 4px #7B4436;
+
+}
+
+.sound-ctrl:hover {
+    text-shadow: 3px 3px 2px #7B4436;
 }
 
 @media screen and (min-width: 1100px) {
