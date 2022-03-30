@@ -27,19 +27,23 @@ window.onload = function () {
 // Reveal drawing on hover (>820)
 if ($(window).width() > 820) {
     $('.pic').mousemove(function (event) {
-        var offset = window.innerWidth * 0.06 + 150
-        var minX = window.innerWidth / 2 - offset;
-        var maxX = window.innerWidth / 2 + offset;
-        var minY = window.innerHeight / 2 - offset - 75;
-        var maxY = window.innerHeight / 2 + offset - 75;
+
+        var brJoin = document.getElementById("btnJoin").getBoundingClientRect();
+        brSocials = document.getElementById("socialContainer").getBoundingClientRect();
+        minX = brJoin.left;
+        maxX = brJoin.right;
+        minY = brJoin.top;
+        maxY = brJoin.bottom;
+        minX2 = brSocials.left;
+        maxX2 = brSocials.right;
+        minY2 = brSocials.top;
+        maxY2 = brSocials.bottom;
+        mask = $('#mask1 circle')[0];
+        upX = event.clientX;
+        upY = event.clientY;
+
         event.preventDefault();
-        var mask = $('#mask1 circle')[0];
-
-        var upX = event.clientX;
-        var upY = event.clientY;
-
-
-        if (upX < minX || upX > maxX || upY < minY || upY > maxY) {
+        if ((upX < minX || upX > maxX || upY < minY || upY > maxY) && (upX < minX2 || upX > maxX2 || upY < minY2 || upY > maxY2)) {
             $('#maskCircle').fadeIn('fast');
             mask.setAttribute("cy", (upY - 5) + 'px');
             mask.setAttribute("cx", (upX) + 'px');
@@ -85,8 +89,22 @@ $('#mute-btn').click(function () {
     $('#unmute-btn').show();
 })
 
-$('#un-mute').click(function () {
-    console.log($('#un-mute').val())
-    player.play();
+$('#unmute-btn-mobile').click(function () {
+    if (firstMute) {
+        player.play();
+        firstMute = false;
+    } else {
+        player.muted = false;
+    }
+    $('#unmute-btn-mobile').hide();
+    $('#mute-btn-mobile').show();
 })
+
+$('#mute-btn-mobile').click(function () {
+    player.muted = true;
+    $('#mute-btn-mobile').hide();
+    $('#unmute-btn-mobile').show();
+})
+
+
 

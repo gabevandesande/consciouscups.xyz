@@ -92,19 +92,23 @@
     </video>
     <div class="pic">
         <!-- Page Content-->
+        <div class="sound-ctrl-mobile"> <a id="mute-btn-mobile" class="mute-btn"> <i class="fa-solid fa-3x fa-volume-high"></i></a>
+            <a id="unmute-btn-mobile" class="unmute-btn"> <i class="fa-solid fa-3x fa-volume-xmark"></i></a>
+        </div>
 
         <div class="nav-bar">
             <img src="./assets/img/cc-logo.png" alt="" class="cc-logo">
             <span class="logo-text">Conscious Cups</span>
+            <div class="sound-ctrl"> <a id="mute-btn"> <i class="fa-solid fa-3x fa-volume-high"></i></a>
+                <a id="unmute-btn"> <i class="fa-solid fa-3x fa-volume-xmark"></i></a>
+            </div>
 
             <audio id="player" loop>
                 <source src="./assets/sound/water.m4a" type="audio/mp4">
             </audio>
 
         </div>
-        <div class="sound-ctrl"> <a id="mute-btn"> <i class="fa-solid fa-3x fa-volume-high"></i></a>
-            <a id="unmute-btn"> <i class="fa-solid fa-3x fa-volume-xmark"></i></a>
-        </div>
+
         <svg class="blur" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%">
             <!-- <image filter="url(#filter2)" xlink:href="https://images.pexels.com/photos/249798/pexels-photo-249798.png" width="100%" height="100%"></image> -->
             <filter id="filter2">
@@ -115,8 +119,8 @@
             </mask>
             <image xlink:href="./assets/img/draw-bg-2.jpeg" mask="url(#mask1)" id="under-img"></image>
         </svg>
-        <div class="btn-join">Join</div>
-        <div class="social-container">
+        <div id="btnJoin" class="btn-join">Join</div>
+        <div class="social-container" id="socialContainer">
             <div class="social-btn btn1">
                 <a href="https://discord.gg/cb6Mdp7T" target="_blank">
                     <i class="fa-brands fa-discord fa-4x discord"></i> </a>

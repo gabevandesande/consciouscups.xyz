@@ -155,12 +155,12 @@ a>.instagram:hover {
     display: none;
     animation: createBox .25s;
     position: absolute;
-    padding-left: 500px;
+    padding-left: 450px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    bottom: calc(30% - 79px);
+    bottom: calc(35vh - 85px);
     z-index: 0;
 }
 
@@ -210,9 +210,9 @@ a>.instagram:hover {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    bottom: 30%;
-    width: 314px;
-    height: 84px;
+    bottom: 35vh;
+    width: 280px;
+    height: 77px;
     cursor: pointer;
     display: inline-block;
     box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.5), 8px 8px 20px rgba(255, 255, 255, 0.5) inset;
@@ -225,7 +225,7 @@ a>.instagram:hover {
     -moz-transition: all .1s ease-out;
     -o-transition: all .1s ease-out;
     transition: all .1s ease-out;
-    padding-block: 26px;
+    padding-block: 22px;
 
 }
 
@@ -270,11 +270,11 @@ a>.instagram:hover {
     color: #fff;
 }
 
-#mute-btn {
+#mute-btn, #mute-btn-mobile {
     display: none;
 }
 
-.sound-ctrl {
+.sound-ctrl-mobile {
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -282,13 +282,27 @@ a>.instagram:hover {
 
 }
 
+.sound-ctrl {
+    display: none;
+    text-shadow: 5px 5px 4px #7B4436;
+}
+
+
 .sound-ctrl:hover {
     text-shadow: 3px 3px 2px #7B4436;
 }
 
 @media screen and (min-width: 1100px) {
     .sound-ctrl {
-        left: 30px;
+        display: block;
+        position: relative;
+        padding-top: 15px;
+        padding-left: 30px;
+        bottom: auto;
         right: auto;
+    }
+
+    .sound-ctrl-mobile {
+        display: none;
     }
 }
