@@ -291,7 +291,7 @@ a>.instagram:hover {
 
 .sound-ctrl-mobile {
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     right: 30px;
     text-shadow: 5px 5px 4px #7B4436;
 
@@ -319,6 +319,13 @@ a>.instagram:hover {
 
     .sound-ctrl-mobile {
         display: none;
+    }
+
+    .pic {
+        z-index: -2;
+    }
+    #vidBG {
+        z-index: -1;
     }
 }
 
