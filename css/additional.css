@@ -26,32 +26,34 @@ body {
     opacity: 0.8;
     animation: fill 3.2s linear infinite;
     animation-fill-mode: forwards;
- }
+}
 
- .load-container{
+.load-container {
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     left: 50%;
- }
- 
- @keyframes fill {
-    0%{
-       opacity: 0.5;
-       transform: translateY(100%);
+}
+
+@keyframes fill {
+    0% {
+        opacity: 0.5;
+        transform: translateY(100%);
     }
-    60%{
+
+    60% {
         transform: translateY(0);
         opacity: 1;
-     }
-    100%{
-       transform: translateY(0);
-       opacity: 1;
     }
- }
- 
- /* ANIMATE STEAM */
- .steam {
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ANIMATE STEAM */
+.steam {
     stroke: #F7F7F7;
     stroke-width: 1.5px;
     stroke-dasharray: 200;
@@ -60,17 +62,17 @@ body {
     animation: steamAnimate 2.5s linear infinite;
     animation-delay: 1.3s;
     animation-fill-mode: forwards;
- }
- 
- @keyframes steamAnimate{
-     10%{
-         stroke-dashoffset: 200;
-     }
-       
-     70%{
-         stroke-dashoffset: 0;
-     }
- }
+}
+
+@keyframes steamAnimate {
+    10% {
+        stroke-dashoffset: 200;
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+    }
+}
 
 audio {
     z-index: 3 !important;
@@ -145,25 +147,13 @@ a>.instagram:hover {
     height: 100%;
 }
 
-.video-contain{
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-}
-
-
-#vidBG {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+video {
+    position: fixed;
     right: 0;
-    left: 0;
-    margin: auto;
-    min-height: 50%;
-    min-width: 50%;
-    overflow: hidden;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(calc((100% - 100vw) / 2), calc((100% - 100vh) /2));
 }
 
 .social-container {
@@ -291,7 +281,7 @@ a>.instagram:hover {
 
 .sound-ctrl-mobile {
     position: absolute;
-    bottom: 60px;
+    bottom: 30px;
     right: 30px;
     text-shadow: 5px 5px 4px #7B4436;
 
@@ -321,12 +311,13 @@ a>.instagram:hover {
         display: none;
     }
 
-    #vidBG{
+    #vidBG {
         z-index: -1;
     }
 
-    
+
 }
+
 /* 
 @media screen and (max-width: 520px) {
     
@@ -336,5 +327,11 @@ a>.instagram:hover {
 @media screen and (max-width: 820px) {
     .sound-ctrl {
         padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .btn-join {
+        bottom: 30vh;
     }
 }
