@@ -320,13 +320,6 @@ a>.instagram:hover {
     .sound-ctrl-mobile {
         display: none;
     }
-
-    .pic {
-        z-index: -2;
-    }
-    #vidBG {
-        z-index: -1;
-    }
 }
 
 @media screen and (max-width: 820px) {
