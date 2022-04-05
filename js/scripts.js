@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
 
 function bgImgResize() {
+    $('body').css("height", window.innerHeight)
     if ($(window).height() > $(window).width()) {
         $('#under-img').css("height", "100vh");
         $('#under-img').css("width", "auto");
