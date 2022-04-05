@@ -324,8 +324,11 @@ a>.instagram:hover {
     #vidBG{
         z-index: -1;
     }
+    .blur {
+        z-index: -2;
+    }
 
-    
+
 }
 /* 
 @media screen and (max-width: 520px) {
