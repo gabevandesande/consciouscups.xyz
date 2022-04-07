@@ -3,41 +3,34 @@
 </head>
 
 <body>
-    <canvas id="bridge" width="750" height="465"></canvas>
+    <figure id="bridgeContainer">
+
+        <canvas id="bridge" width="750" height="465"></canvas>
+    </figure>
     <script>
+        CLEARDOT_DELAY_MILLISECONDS = 1500;
+
         var bridge = document.getElementById("bridge"),
             bridgeCanvas = bridge.getContext('2d'),
             brushRadius = (bridge.width / 100) * 5,
             img = new Image();
-        if (brushRadius < 50) { brushRadius = 50 }
+
+        if (brushRadius < 50) {
+            brushRadius = 50
+        }
+
         img.onload = function () {
             bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
         }
-        img.loc = '';
-        img.filename = './assets/img/test-bg.png';
+        img.loc = './assets/img/';
+        img.filename = 'test-bg.png';
         if (window.devicePixelRatio >= 2) {
             var nameParts = img.filename.split('.');
             img.src = img.loc + nameParts[0] + "-2x" + "." + nameParts[1];
         } else {
             img.src = img.loc + img.filename;
         }
-        bridge.addEventListener("mousemove", function (e) {
-            var brushPos = getBrushPos(e.clientX, e.clientY);
-            var leftBut = detectLeftButton(e);
-            if (leftBut == 1) {
-                drawDot(brushPos.x, brushPos.y);
-            }
-        }, false);
 
-        bridge.addEventListener("touchmove", function (e) {
-            e.preventDefault();
-            var touch = e.targetTouches[0];
-            if (touch) {
-                var brushPos = getBrushPos(touch.pageX, touch.pageY);
-                circlesArray.push(new Circle(brushPos.x, brushPos.y, 50));
-                drawDot(brushPos.x, brushPos.y);
-            }
-        }, false);
         function detectLeftButton(event) {
             if ('buttons' in event) {
                 return event.buttons === 1;
@@ -47,6 +40,7 @@
                 return event.button === 1;
             }
         }
+
         function getBrushPos(xRef, yRef) {
             var bridgeRect = bridge.getBoundingClientRect();
             return {
@@ -54,39 +48,46 @@
                 y: Math.floor((yRef - bridgeRect.top) / (bridgeRect.bottom - bridgeRect.top) * bridge.height)
             };
         }
+
         function drawDot(mouseX, mouseY) {
             bridgeCanvas.beginPath();
             bridgeCanvas.arc(mouseX, mouseY, brushRadius, 0, 2 * Math.PI, true);
+            bridgeCanvas.fillStyle = '#000';
             bridgeCanvas.globalCompositeOperation = "destination-out";
             bridgeCanvas.fill();
-            setTimeout(function () {
-                var img = new Image();
-                if (brushRadius < 50) { brushRadius = 50 }
-                img.onload = function () {
-                    bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
-                }
-                img.loc = '';
-                img.filename = './assets/img/test-bg.png';
-                if (window.devicePixelRatio >= 2) {
-                    var nameParts = img.filename.split('.');
-                    img.src = img.loc + nameParts[0] + "-2x" + "." + nameParts[1];
-                } else {
-                    img.src = img.loc + img.filename;
-                }
-            }, 500)
         }
 
-        function imgInit() {
-            var bridge = document.getElementById("bridge"),
-                bridgeCanvas = bridge.getContext('2d'),
-                brushRadius = (bridge.width / 100) * 5,
-                img = new Image();
-            if (brushRadius < 50) { brushRadius = 50 }
-            img.onload = function () {
-                bridgeCanvas.drawImage(img, 0, 0, bridge.width, bridge.height);
+        function drawClearDot(x, y) {
+            const squareX = x - brushRadius
+            const squareY = y - brushRadius
+            const squareSize = brushRadius * 2
+            bridgeCanvas.globalCompositeOperation = "source-over";
+            bridgeCanvas.drawImage(img, squareX, squareY, squareSize, squareSize, squareX, squareY, squareSize, squareSize);
+        }
+
+        bridge.addEventListener("mousemove", function (e) {
+            var brushPos = getBrushPos(e.clientX, e.clientY);
+            var leftBut = detectLeftButton(e);
+            if (leftBut) {
+                drawDot(brushPos.x, brushPos.y);
+                setClearDot(brushPos.x, brushPos.y, CLEARDOT_DELAY_MILLISECONDS)
             }
-            img.loc = '';
-            img.filename = './assets/img/test-bg.png';
+        }, false);
+
+        bridge.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+            var touch = e.targetTouches[0];
+            if (touch) {
+                var brushPos = getBrushPos(touch.pageX, touch.pageY);
+                drawDot(brushPos.x, brushPos.y);
+                setClearDot(brushPos.x, brushPos.y, CLEARDOT_DELAY_MILLISECONDS)
+            }
+        }, false);
+
+        function setClearDot(x, y, delay) {
+            setTimeout(() => {
+                drawClearDot(x, y)
+            }, delay);
         }
     </script>
 </body>
