@@ -19,14 +19,29 @@ document.addEventListener('DOMContentLoaded', () =>
 
 
 function bgImgResize() {
-    $('body').css("height", window.innerHeight)
-    if ($(window).height() > $(window).width()) {
-        $('#under-img').css("height", "100vh");
-        $('#under-img').css("width", "auto");
-    }
-    else {
-        $('#under-img').css("width", "100vw")
+    $('body').css("height", window.innerHeight + 'px')
+    if ($(window).height() > $('#under-img').height()) {      
+        if ($(window).width() > $('#under-img').width()) {
+            $('#under-img').css("width", '100vw');
+            $('#under-img').css("height", "auto");
+
+
+        } else {
+            $('#under-img').css("height", window.innerHeight + 'px');
+        }
+
+    } else if ($(window).width() > $('#under-img').width()) {
+        console.log("width")
+        $('#under-img').css("width", '100vw');
         $('#under-img').css("height", "auto");
+
+
+    }
+
+    if ($(window).width() > $(window).height()) {
+        if ($('.background-video-inset').width() < window.innerWidth) {
+            $('.background-video-inset').css("min-width", window.innerWidth + 'px')
+        }
 
     }
 }
