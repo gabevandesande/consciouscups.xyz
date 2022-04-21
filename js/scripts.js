@@ -15,28 +15,33 @@ document.addEventListener('DOMContentLoaded', () =>
     wait(4000).then(() => {
         setVisible('.pic', true);
         setVisible('#loading', false);
+        bgImgResize();
+
     }));
 
 
 function bgImgResize() {
     $('body').css("height", window.innerHeight + 'px')
-    if ($(window).height() > $('#under-img').height()) {      
-        if ($(window).width() > $('#under-img').width()) {
-            $('#under-img').css("width", '100vw');
-            $('#under-img').css("height", "auto");
-
-
-        } else {
-            $('#under-img').css("height", window.innerHeight + 'px');
-        }
-
-    } else if ($(window).width() > $('#under-img').width()) {
-        console.log("width")
-        $('#under-img').css("width", '100vw');
-        $('#under-img').css("height", "auto");
-
-
+    bgImgProp = 1.94197031
+    windowProp = $(window).width() / $(window).height()
+    if (windowProp > bgImgProp) {
+        $('#under-img').css('width', '100vw')
+        $('#under-img').css('height', 'auto')
+    } else {
+        $('#under-img').css('height', '100%')
+        $('#under-img').css('width', 'auto')
     }
+
+    w = $('#under-img').width();
+    h = $('#under-img').height();
+    w2 = window.innerWidth;
+    h2 = window.innerHeight;
+    transX = (w2 - w)/2;
+    transY = (h2 - h)/2;
+
+    $('#under-img').css('transform', `translate(${transX}px, ${transY}px)`)
+    $('#maskCircle').css('transform', `translate(${transX * -1}px, ${transY * -1}px)`)
+  
 
     if ($(window).width() > $(window).height()) {
         if ($('.background-video-inset').width() < window.innerWidth) {
@@ -45,11 +50,6 @@ function bgImgResize() {
 
     }
 }
-
-
-window.onload = function () {
-    bgImgResize();
-};
 
 $(window).resize(function () {
     bgImgResize();
