@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () =>
 function bgImgResize() {
     $('body').css("height", window.innerHeight + 'px')
     bgImgProp = 1.94197031
+    bgVidProp = 1.77777777
     windowProp = $(window).width() / $(window).height()
     if (windowProp > bgImgProp) {
         $('#under-img').css('width', '100vw')
@@ -31,24 +32,37 @@ function bgImgResize() {
         $('#under-img').css('height', '100%')
         $('#under-img').css('width', 'auto')
     }
+    // if (windowProp > bgVidProp) {
+    //     $('#vidContainer').css('width', '100vw')
+    //     $('#vidContainer').css('height', 'auto')
+    // } else {
+    //     $('#vidContainer').css('height', '100%')
+    //     $('#vidContainer').css('width', 'auto')
+    // }
 
-    w = $('#under-img').width();
-    h = $('#under-img').height();
-    w2 = window.innerWidth;
-    h2 = window.innerHeight;
-    transX = (w2 - w)/2;
-    transY = (h2 - h)/2;
+    wImg = $('#under-img').width();
+    hImg = $('#under-img').height();
+    wWin = window.innerWidth;
+    hWin = window.innerHeight;
+    wVid = $('#vidContainer').width();
+    hVid = $('#vidContainer').height();
+    transXImg = (wWin - wImg) / 2;
+    transYImg = (hWin - hImg) / 2;
+    transXVid = (wWin - wVid) / 2;
+    transYVid = (hWin - hVid) / 2;
 
-    $('#under-img').css('transform', `translate(${transX}px, ${transY}px)`)
-    $('#maskCircle').css('transform', `translate(${transX * -1}px, ${transY * -1}px)`)
-  
+    $('#under-img').css('transform', `translate(${transXImg}px, ${transYImg}px)`)
+    $('#maskCircle').css('transform', `translate(${transXImg * -1}px, ${transYImg * -1}px)`)
+    // $('#vidContainer').css('transform', `translate(${transXVid}px, ${transYVid}px)`)
 
-    if ($(window).width() > $(window).height()) {
-        if ($('.background-video-inset').width() < window.innerWidth) {
-            $('.background-video-inset').css("min-width", window.innerWidth + 'px')
-        }
 
-    }
+
+    // if ($(window).width() > $(window).height()) {
+    //     if ($('.background-video-inset').width() < window.innerWidth) {
+    //         $('.background-video-inset').css("min-width", window.innerWidth + 'px')
+    //     }
+
+    // }
 }
 
 $(window).resize(function () {
