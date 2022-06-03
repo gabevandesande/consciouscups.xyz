@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () =>
 
 function bgImgResize() {
     $('body').css("height", window.innerHeight + 'px')
+    xTrans = (window.innerWidth - $('#vidItself').width())/2 + "px" 
+    console.log( $('#vidItself').width())
+    console.log(xTrans)
+    yTrans = (window.innerHeight - $('#vidItself').height())/2 + "px" 
+    console.log(yTrans)
+    $('#vidItself').css('transform', 'translate(' + xTrans + ', ' + yTrans + ')')
     bgImgProp = 1.94197031
     bgVidProp = 1.77777777
     windowProp = $(window).width() / $(window).height()

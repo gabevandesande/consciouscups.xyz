@@ -15,8 +15,6 @@ body {
     min-height: 100%;
     left: 0;
     top: 0;
-    transform: translate(calc((100vw - 100%) / 2), calc((100vh - 100%)/2));
-
     z-index: -999;
     overflow: hidden;
 }
@@ -353,8 +351,25 @@ a>.instagram:hover {
 
 @media screen and (max-width: 520px) {
     .btn-join {
-        bottom: 28vh;
+        bottom: 22vh;
     }
+
+    .social-container-mobile {
+        padding-left: 0px;
+        display: none;
+        animation: createBox .25s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: calc(22vh - 79px);
+        z-index: 0;
+    }
+
+    /* .home-bg-vid {
+        margin-top: -8vh;
+    } */
 }
 
 
