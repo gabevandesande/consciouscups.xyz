@@ -1,3 +1,5 @@
+var spotlightEnabled = false;
+
 // Load screen
 const wait = (delay = 0) =>
     new Promise(resolve => setTimeout(resolve, delay));
@@ -95,7 +97,7 @@ if ($(window).width() > 820) {
         upY = event.clientY;
 
         event.preventDefault();
-        if ((upX < minX || upX > maxX || upY < minY || upY > maxY) && (upX < minX2 || upX > maxX2 || upY < minY2 || upY > maxY2)) {
+        if ((upX < minX || upX > maxX || upY < minY || upY > maxY) && (upX < minX2 || upX > maxX2 || upY < minY2 || upY > maxY2) && spotlightEnabled) {
             $('#maskCircle').fadeIn('fast');
             mask.setAttribute("cy", (upY - 5) + 'px');
             mask.setAttribute("cx", (upX) + 'px');
@@ -158,4 +160,17 @@ $('#mute-btn-mobile').click(function () {
     $('#unmute-btn-mobile').show();
 })
 
+
+//Spotlight toggle
+$('#dis-spotlight-btn').click(function (){
+    spotlightEnabled = true;
+    $('#dis-spotlight-btn').hide()
+    $('#spotlight-btn').show()
+})
+
+$('#spotlight-btn').click(function (){
+    spotlightEnabled = false;
+    $('#spotlight-btn').hide()
+    $('#dis-spotlight-btn').show()
+})
 
