@@ -328,6 +328,10 @@ a>.instagram:hover {
     line-height: 100px;
 }
 
+.slightly-smaller-icon {
+    font-size: 2.85em;
+}
+
 
 .sound-ctrl, .search-ctrl {
     display: none;
