@@ -136,7 +136,7 @@ a>.instagram:hover {
     font-size: 32px;
     color: white;
     padding-left: 15px;
-    text-shadow: 5px 5px 4px #7B4436;
+    text-shadow: 2px 2px 3px #C2ADF4, ;
     font-weight: bolder;
 }
 
@@ -301,9 +301,37 @@ a>.instagram:hover {
     position: absolute;
     bottom: 30px;
     right: 30px;
-    text-shadow: 5px 5px 4px #7B4436;
-
 }
+
+.grad-shadow-1{
+    text-shadow: 2px 2px 4px #C2ADF4;
+}
+.grad-bridge-1 {
+    text-shadow: 2px 2px 4px #e4baee;
+}
+.grad-shadow-2{
+    text-shadow: 2px 2px 4px #FDC4E9;
+}
+.grad-bridge-2{
+    text-shadow: 2px 2px 4px #d1b9f5;
+}
+.grad-shadow-3{
+    text-shadow: 2px 2px 4px #80E0FC;
+}
+.grad-bridge-3{
+    text-shadow: 2px 2px 4px #99c5fe;
+}
+.grad-shadow-4{
+    text-shadow: 2px 2px 4px #ACAFFF;
+}
+.grad-shadow-5{
+    text-shadow: 2px 2px 4px #CC94FF;
+}
+.grad-shadow-5:hover {
+    text-shadow: 1px 1px 2px #CC94FF;
+}
+
+
 
 .cross-line {
     height: 50px;
@@ -335,12 +363,9 @@ a>.instagram:hover {
 
 .sound-ctrl, .search-ctrl {
     display: none;
-
-    text-shadow: 5px 5px 4px #7B4436;
 }
 
 .sound-ctrl:hover, .search-ctrl:hover {
-    text-shadow: 3px 3px 2px #7B4436;
     cursor: pointer;
 }
 
