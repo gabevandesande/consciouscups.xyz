@@ -1,6 +1,7 @@
 var spotlightEnabled = false;
 
 // Load screen
+
 const wait = (delay = 0) =>
     new Promise(resolve => setTimeout(resolve, delay));
 
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () =>
         bgImgResize();
 
     }));
+
+    
 
 
 function bgImgResize() {
@@ -76,6 +79,8 @@ function bgImgResize() {
 $(window).resize(function () {
     bgImgResize();
 })
+
+
 
 // Reveal drawing on hover (>820)
 if ($(window).width() > 820) {
@@ -159,6 +164,9 @@ $('#mute-btn-mobile').click(function () {
     $('#mute-btn-mobile').hide();
     $('#unmute-btn-mobile').show();
 })
+
+//Unmute 2
+
 
 
 //Spotlight toggle

@@ -23,12 +23,27 @@
 </head>
 
 <body class="scroll page">
+    <audio id="player2" loop autoplay>
+        <source src="./assets/sound/waterfall.m4a" type="audio/mp4">
+    </audio>
+    <div class="sound-ctrl-mobile grad-shadow-5"> <a id="mute-btn-mobile2" class="mute-btn"> <i
+                class="fa-solid fa-2x fa-volume-high"></i></a>
+        <a id="unmute-btn-mobile2" class="unmute-btn"> <i class="fa-solid fa-2x fa-volume-xmark"></i></a>
+    </div>
     <div class="nav-bar">
-        <img src="./assets/img/cc-logo.png" alt="" class="cc-logo">
-        <span class="logo-text"><span class="grad-shadow-1">Con</span><span class="grad-bridge-1">s</span><span
-                class="grad-shadow-2">ci</span><span class="grad-bridge-2">o</span><span class="grad-shadow-3">us
-            </span><span class="grad-bridge-3">C</span><span class="grad-shadow-4">ups </span></span>
+        <a href="./index.html" class="home-link">
+            <img src="./assets/img/cc-logo.png" alt="" class="cc-logo">
+        </a>
+        <a href="./index.html" class="home-link">
 
+            <span class="logo-text"><span class="grad-shadow-1">Con</span><span class="grad-bridge-1">s</span><span
+                    class="grad-shadow-2">ci</span><span class="grad-bridge-2">o</span><span class="grad-shadow-3">us
+                </span><span class="grad-bridge-3">C</span><span class="grad-shadow-4">ups </span></span>
+            <!-- <span class="logo-text">Conscious Cups</span> -->
+        </a>
+        <div class="sound-ctrl grad-shadow-5"> <a id="mute-btn2"> <i class="fa-solid fa-3x fa-volume-high"></i></a>
+            <a id="unmute-btn2"> <i class="fa-solid fa-3x fa-volume-xmark"></i></a>
+        </div>
 
     </div>
     <div class="home-bg-vid shop-vid" id="vidContainer">
@@ -44,97 +59,377 @@
             <div class="col"></div>
         </div>
         <div class="row full-page justify-content-center">
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap ">
-                <div class="product-box img-1 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">HOP WTR</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Tacuba.png" alt=""></div>
+                        <div class="product-title text-center">Tacuba Coffee</div>
+                        <div class="product-subtitle text-center">Sustainably-Farmed Coffee</div>
                     </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/hop-wtr.png"
-                            alt=""></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-2 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Hiyo</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
-                    </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/hiyo.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-3 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Leisure</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
-                    </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/leisure.png"
-                            alt=""></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-4 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Chatty Matcha</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
-                    </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/chatty.png"
-                            alt=""></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-5 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Psychedelic Water</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
-                    </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/psychadelic.png"
-                            alt=""></div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-6 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Unity</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
-                    </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/unity.png" alt="">
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Tacuba.png" alt="">Tacuba Coffee</div>
+                        <div class="product-text">
+                            Tacuba uses regenerative agriculture techniques at their Salvadoran farms. Tacuba is a
+                            veteran-owned small business.
+                        </div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button onclick="goToLink('https://tacubacoffeeco.com/')"
+                                class="code-btn">Go to Site</button></div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-7 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Luna Bay Booch</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Tenzo.png" alt=""></div>
+                        <div class="product-title text-center">Tenzo Matcha</div>
+                        <div class="product-subtitle text-center">Ceremonial-Grade Matcha</div>
                     </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/hop-wtr.png"
-                            alt=""></div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Tenzo.png" alt="">Tenzo Matcha</div>
+                        <div class="product-text">
+                            Tenzo Matcha is 100 % USDA Organic, Kosher, Paleo, and Vegan! They work directly with
+                            farmers in Kagoshima, Japan.
+                        </div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button onclick="goToLink('http://tenzo.com/')"
+                                class="code-btn">Go to Site</button></div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-8 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">St. Hildies</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Bucket-Hat.png" alt=""></div>
+                        <div class="product-title text-center">Conscious Bucket</div>
+                        <div class="product-subtitle text-center">Get on the Waitlist</div>
                     </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/hop-wtr.png"
-                            alt=""></div>
+                    <div class="product-back back">
+                        <div class="product-title smaller"><img class="product-img" height="80px"
+                                src="./assets/img/products/Bucket-Hat.png" alt="">Conscious Bucket</div>
+
+                        <div class="product-text">Get on the waitlist for our first merch drop coming soon!</div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button
+                                onclick="goToLink('https://docs.google.com/forms/d/1iGqKbKddwqh4Ro6pwcRrI3q048lyq-OhyjSJ3mfs_FM/viewform?edit_requested=true')"
+                                class="code-btn">Waitlist Here</button></div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-items-center product-wrap">
-                <div class="product-box img-9 align-items-center">
-                    <div class="product-desc">
-                        <div class="product-title">Kobrick Coffee</div>
-                        <div class="product-subtitle">Code: ConsciousCups</div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Maka.png" alt=""></div>
+                        <div class="product-title text-center">Maka</div>
+                        <div class="product-subtitle text-center">Wheatgrass Yerba-Mate</div>
                     </div>
-                    <div class="product-img-wrap"><img class="product-img" src="./assets/img/products/hop-wtr.png"
-                            alt=""></div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Maka.png" alt="">Maka</div>
+                        <div class="product-text">
+                            Maka is a B-Corp, 1% for the Planet Member, and Carbon Neutral Company. Try their sparkling
+                            wheatgrass yerba-mate.
+                        </div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button onclick="goToLink('https://livingmaka.com/')"
+                                class="code-btn">Go to Site</button></div>
+                    </div>
                 </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Psychedelic-Water.png" alt=""></div>
+                        <div class="product-title text-center">Psychedelic Water</div>
+                        <div class="product-subtitle text-center">Psychoactive Herbal Supplement</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title smaller"><img class="product-img" height="80px"
+                                src="./assets/img/products/Psychedelic-Water.png" alt="">Psychedelic Water</div>
+                        <div class="product-text">
+                            HOP WTR is a non-alcoholic sparkling hop water crafted with bold hops and mood-boosting
+                            ingredients.
+                        </div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button
+                                onclick="goToLink('https://psychedelicwater.com/')" class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Kobrick.png" alt=""></div>
+                        <div class="product-title text-center">Kobrick Coffee</div>
+                        <div class="product-subtitle text-center">Organic, Fair-Trade Coffee</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Kobrick.png" alt="">Kobrick Coffee</div>
+                        <div class="product-text">
+                            All organic, fair-trade certified, bird friendly coffee from across the globe. Visit them in
+                            the Meatpacking District of NYC!
+                        </div>
+                        <div class="product-subtitle">Code: consciouscups for 15% off</div>
+                        <div class="product-text text-center"><button onclick="copy('consciouscups', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://www.kobricks.com/')" class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Chatty-Matcha.png" alt=""></div>
+                        <div class="product-title text-center">Chatty Matcha</div>
+                        <div class="product-subtitle text-center">Nitro Matcha</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Chatty-Matcha.png" alt="">Chatty Matcha</div>
+                        <div class="product-text">
+                            ​​Nitro matcha for your every day, 35 calories, dairy free, & as much caffeine as a shot of
+                            espresso.
+                        </div>
+                        <div class="product-subtitle">Code: CONSCIOUS10 for 10% off</div>
+                        <div class="product-text text-center"><button onclick="copy('CONSCIOUS10', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://www.chattymatcha.com/')" class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Hiyo.png" alt=""></div>
+                        <div class="product-title text-center">Hiyo</div>
+                        <div class="product-subtitle text-center">Sparkling Social Tonic</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Hiyo.png" alt="">Hiyo</div>
+                        <div class="product-text">
+                            The better-than-alcohol alternative crafted with organic adaptogens, natural nootropics, and
+                            functional botanicals to elevate your mood.
+                        </div>
+                        <div class="product-subtitle">Code: CONSCIOUS20 for 20% off</div>
+                        <div class="product-text text-center"><button onclick="copy('CONSCIOUS20', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://drinkhiyo.com/')" class="code-btn">Go to Site</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Unity.png" alt=""></div>
+                        <div class="product-title text-center">Unity</div>
+                        <div class="product-subtitle text-center">CBD Wellness-Ade</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Unity.png" alt="">Unity</div>
+                        <div class="product-text">
+                            All-natural wellness beverages infused with CBD and other plant-based nutrients to help
+                            improve well-being and help you unwind.
+                        </div>
+                        <div class="product-subtitle">Code: CONSCIOUSCUPS for 25% off</div>
+                        <div class="product-text text-center"><button onclick="copy('CONSCIOUSCUPS', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://drinkhiyo.com/')" class="code-btn">Go to Site</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/St-Hildies.png" alt=""></div>
+                        <div class="product-title text-center">St.Hildies</div>
+                        <div class="product-subtitle text-center">Botanical Spiked Seltzer</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/St-Hildies.png" alt="">St. Hildies</div>
+                        <div class="product-text">
+                            St Hildie's Spiked Seltzers are made with botanical tinctures, a splash of real fruit &
+                            magic for wellness-minded imbibers.
+                        </div>
+                        <div class="product-subtitle">Code: CONSCIOUSCUPS20 for 20% off</div>
+                        <div class="product-text text-center"><button onclick="copy('CONSCIOUSCUPS20', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://sthildies.com/')" class="code-btn">Go to Site</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Leisure.png" alt=""></div>
+                        <div class="product-title text-center">Leisure</div>
+                        <div class="product-subtitle text-center">Hydrating Wellness-Ade</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Leisure.png" alt="">Leisure</div>
+                        <div class="product-text">
+                            Packed with electrolytes, adaptogens, and nootropics to help you feel like your most
+                            creative and productive self each day.
+                        </div>
+                        <div class="product-subtitle">Code: consciouscups for 15% off</div>
+                        <div class="product-text text-center"><button onclick="copy('consciouscups', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://leisureproject.co/')" class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Hop-Water.png" alt=""></div>
+                        <div class="product-title text-center">HOP WTR</div>
+                        <div class="product-subtitle text-center">Sparkling Hop Water</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Hop-Water.png" alt="">HOP WTR</div>
+                        <div class="product-text">
+                            HOP WTR is a non-alcoholic sparkling hop water crafted with bold hops and mood-boosting
+                            ingredients.
+                        </div>
+                        <div class="product-subtitle">Code: consciouscups for 20% off</div>
+                        <div class="product-text text-center"><button onclick="copy('consciouscups', this)"
+                                class="code-btn">Copy Code <i class="fa-regular fa-copy"></i></button><button
+                                onclick="goToLink('https://leisureproject.co/')" class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Luna-Bay.png" alt=""></div>
+                        <div class="product-title text-center">Luna Bay Booch</div>
+                        <div class="product-subtitle text-center">Hard Kombucha</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title smaller"><img class="product-img" height="80px"
+                                src="./assets/img/products/Luna-Bay.png" alt="">Luna Bay Booch</div>
+                        <div class="product-text">
+                            Plant based and probiotic, all natural and low sugar, gluten free and NON-GMO Hard Kombucha
+                            for celebrating a day well-lived.
+                        </div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button onclick="goToLink('https://lunabaybooch.com/')"
+                                class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap flip-container justify-content-center">
+                <div class="product-box text-center justify-content-center flipper">
+                    <div class="front">
+                        <div class="product-img-wrap text-center"><img class="product-img"
+                                src="./assets/img/products/Krabot.png" alt=""></div>
+                        <div class="product-title text-center">Krabot</div>
+                        <div class="product-subtitle text-center">Flavored Kratom Powder</div>
+                    </div>
+                    <div class="product-back back">
+                        <div class="product-title"><img class="product-img" height="80px"
+                                src="./assets/img/products/Krabot.png" alt="">Krabot</div>
+                        <div class="product-text">
+                            The first flavored kratom powder on the market. No sugar, no additives, and no extract. Just
+                            the raw leaf with a tasty flavor profile.
+                        </div>
+                        <div class="sub-filler"></div>
+                        <div class="product-text text-center"><button onclick="goToLink('https://www.krabot.com/')"
+                                class="code-btn">Go to Site</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 align-items-center product-wrap justify-content-center">
+                <a class="product-link"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe4_33GspfTCYwh08JVfIqHxw25s5y2dVyolKj-qPHTjehYfw/viewform">
+                    <div class="product-box text-center justify-content-center ">
+                        <div class="">
+                            <div class="product-title text-center pt-center">Suggest a Product!</div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+    <script>
+        function copy(code, el) {
+            event.preventDefault();
+            navigator.clipboard.writeText(code);
+            let icon = el.getElementsByClassName('fa-copy')[0];
+            icon.classList.remove('fa-copy')
+            icon.classList.remove('fa-regular')
+            icon.classList.add('fa')
+
+            icon.classList.add('fa-check')
+
+        }
+
+        function goToLink(link) {
+            location.href = link
+        }
+    </script>
+    <script>var firstMute2 = true;
+        var player2 = document.getElementById("player2")
+        $('#unmute-btn2').click(function () {
+            if (firstMute2) {
+                player2.play();
+                firstMute2 = false;
+            } else {
+                player2.muted = false;
+            }
+            $('#unmute-btn2').hide();
+            $('#mute-btn2').show();
+        })
+
+        $('#mute-btn2').click(function () {
+            player2.muted = true;
+            $('#mute-btn2').hide();
+            $('#unmute-btn2').show();
+        })
+
+        $('#unmute-btn-mobile2').click(function () {
+            if (firstMute2) {
+                player2.play();
+                firstMute2 = false;
+            } else {
+                player2.muted = false;
+            }
+            $('#unmute-btn-mobile2').hide();
+            $('#mute-btn-mobile2').show();
+        })
+
+        $('#mute-btn-mobile2').click(function () {
+            player2.muted = true;
+            $('#mute-btn-mobile2').hide();
+            $('#unmute-btn-mobile2').show();
+        })</script>
+
 
 </body>
