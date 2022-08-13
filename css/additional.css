@@ -1,10 +1,13 @@
 body {
     width: 100vw;
     cursor: crosshair;
-    overflow: hidden;
-    background-image: url('../assets/img/vid-bg-still.png');
+    overflow: auto;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.scroll-page {
+    overflow: auto !important;
 }
 
 .home-bg-vid {
@@ -17,6 +20,11 @@ body {
     top: 0;
     z-index: -999;
     overflow: hidden;
+}
+
+.shop-vid {
+    position: fixed;
+    opacity: 0.8;
 }
 
 #loading {
@@ -34,7 +42,7 @@ body {
 .liquid {
     transform: translateX(100%);
     transform: translateY(100%);
-    opacity: 0.8;
+    opacity: 0.9;
     animation: fill 3.2s linear infinite;
     animation-fill-mode: forwards;
 }
@@ -44,6 +52,107 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+}
+
+
+
+.product-box {
+    background: rgba(255, 255, 255, 0.9);
+    height: 25vh;
+    display: flex;
+    flex-grow: 1;
+    margin-block: 2.5vh;
+    border-radius: 5px;
+    font-family: Raleway, sans-serif;
+    box-shadow: 10px 10px;
+
+}
+
+.product-box:hover {
+    cursor: pointer;
+    background: linear-gradient(252.44deg, #C2ADF4 0%, #FDC4E9 11.46%, #80E0FC 48.96%, #ACAFFF 76.04%, #CC94FF 100%);
+    transition: all .2s ease-in-out;
+    box-shadow: 5px 5px;
+
+}
+
+
+
+.product-grid {
+    margin-inline: auto;
+    margin-top: 12.5vh;
+}
+
+.product-desc, .product-img-wrap {
+    width: 50%;
+    padding-block: 10px;
+}
+
+.product-img-wrap {
+    height: 80%;
+    text-align: right;
+}
+
+.product-wrap {
+    overflow: hidden;
+}
+
+.product-desc {
+    margin-left: 15px;
+
+}
+
+.product-img {
+    padding: 10px;
+    padding-right: 20px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.product-title {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.product-subtitle {
+    padding-top: 10px;
+    font-size: 14px;
+
+}
+
+/* .img-1 {
+    background: rgba(144, 175, 224, 0.9)
+}
+
+.img-2 {
+    background: rgba(228, 205, 174, 0.9)
+}
+
+.img-3 {
+    background: rgba(203, 198, 196, 0.9)
+}
+
+.img-4 {
+    background: rgba(222, 230, 191, 0.9);
+
+}
+
+.img-5 {
+    background: rgba(236, 149, 97, 0.9)
+}
+
+.img-6 {
+    background: rgba(254, 167, 191, 0.9)
+}
+
+.img-7 {}
+
+.img-8 {}
+
+.img-9 {} */
+
+.full-page {
+    height: 100%;
 }
 
 @keyframes fill {
@@ -303,30 +412,38 @@ a>.instagram:hover {
     right: 30px;
 }
 
-.grad-shadow-1{
+.grad-shadow-1 {
     text-shadow: 2px 2px 4px #C2ADF4;
 }
+
 .grad-bridge-1 {
     text-shadow: 2px 2px 4px #e4baee;
 }
-.grad-shadow-2{
+
+.grad-shadow-2 {
     text-shadow: 2px 2px 4px #FDC4E9;
 }
-.grad-bridge-2{
+
+.grad-bridge-2 {
     text-shadow: 2px 2px 4px #d1b9f5;
 }
-.grad-shadow-3{
+
+.grad-shadow-3 {
     text-shadow: 2px 2px 4px #80E0FC;
 }
-.grad-bridge-3{
+
+.grad-bridge-3 {
     text-shadow: 2px 2px 4px #99c5fe;
 }
-.grad-shadow-4{
+
+.grad-shadow-4 {
     text-shadow: 2px 2px 4px #ACAFFF;
 }
-.grad-shadow-5{
+
+.grad-shadow-5 {
     text-shadow: 2px 2px 4px #CC94FF;
 }
+
 .grad-shadow-5:hover {
     text-shadow: 1px 1px 2px #CC94FF;
 }
@@ -350,8 +467,9 @@ a>.instagram:hover {
     bottom: 20px;
     left: 0;
     right: 0;
-    content: '\d7'; /* use the hex value here... */
-    font-size: 37px; 
+    content: '\d7';
+    /* use the hex value here... */
+    font-size: 37px;
     color: #fff !important;
     line-height: 100px;
 }
