@@ -11,6 +11,9 @@ body {
     overflow: auto !important;
 }
 
+.margin-auto{
+    margin: auto;
+}
 .home-bg-vid {
     position: absolute;
     padding: 0;
@@ -23,9 +26,27 @@ body {
     overflow: hidden;
 }
 
+.mr-30{
+    margin-right: 30px;
+}
+
 .shop-vid {
     position: fixed;
     opacity: 0.8;
+}
+
+.art-img {
+    width: 100%;
+}
+
+.art-wrap {
+    background: linear-gradient(252.44deg, #C2ADF4 0%, #FDC4E9 11.46%, #80E0FC 48.96%, #ACAFFF 76.04%, #CC94FF 100%);
+    padding: 6px;
+
+}
+
+.art-col {
+    padding-block: 12px;
 }
 
 #loading {
@@ -72,7 +93,7 @@ body {
 
 .product-box {
     background: rgba(237, 255, 236, 0.8);
-    height: 34vh;
+    height: max(34vh, 330px);
     margin-block: 2.5vh;
     font-weight: bold;
 
@@ -150,7 +171,7 @@ button:hover {
     font-size: 14px;
     font-weight: 400;
     padding-top: 20px;
-    padding-inline: 5px;
+    padding-inline: 40px;
 }
 
 .product-grid {
@@ -614,6 +635,13 @@ a>.instagram:hover {
         right: 30px;
         z-index: 2;
     }
+
+    .art-btn {
+        position: absolute;
+        top: calc(1vh + 30px);
+        right: 90px;
+        z-index: 2;
+    }
 }
 
 
@@ -627,8 +655,25 @@ a>.instagram:hover {
         bottom: 30px;
         left: 30px;
         z-index: 2;
+    
+    }
+    .art-btn {
+        position: absolute;
+        bottom: 30px;
+        left: calc(50vw - 15px);
+        z-index: 2;
 
     }
+}
+
+.design-btn-mobile{
+    display: none;
+    margin-top: 30px;
+    
+}
+
+.card-buttons{
+    float: bottom;
 }
 
 @media screen and (max-width: 520px) {
@@ -647,6 +692,14 @@ a>.instagram:hover {
         margin-right: auto;
         bottom: calc(22vh - 79px);
         z-index: 0;
+    }
+
+    .design-btn {
+        display: none
+    }
+
+    .design-btn-mobile {
+        display: block
     }
 
 
