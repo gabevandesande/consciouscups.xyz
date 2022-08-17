@@ -36,6 +36,12 @@ body {
     opacity: 0.8;
 }
 
+.art-vid {
+    position: fixed;
+    opacity: 0.9;
+}
+
+
 .art-img {
     width: 100%;
 }
