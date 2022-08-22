@@ -325,7 +325,7 @@ a>.instagram:hover {
 .nav-bar {
     position: absolute;
     width: 100%;
-    height: 10vh;
+    height: min(10vh, 100px);
     top: 0;
     left: 0;
     padding-left: 10px;
@@ -348,8 +348,7 @@ a>.instagram:hover {
 
 
 .cc-logo {
-    height: 10vh;
-    width: calc(10vh);
+    height: min(10vh, 100px);
     z-index: 2;
 }
 
@@ -365,7 +364,7 @@ a>.instagram:hover {
 
 @media screen and (min-width: 820px) {
     .logo-text {
-        font-size: 4.5vh;
+        font-size: min(4.5vh, 45px);
         padding-left: 30px;
     }
 }
@@ -625,10 +624,6 @@ a>.instagram:hover {
     #vidBG {
         z-index: -1;
     }
-
-
-
-
 }
 
 
@@ -643,7 +638,7 @@ a>.instagram:hover {
     .art-btn {
         position: absolute;
         top: calc(1vh + 30px);
-        right: 90px;
+        right: 105px;
         z-index: 2;
     }
 }
@@ -727,6 +722,11 @@ a>.instagram:hover {
 @media screen and (max-width: 520px) {
     .header-text{
         width: 100%;
+    }
+
+
+    .mobile-2x {
+        font-size: 2em;
     }
 }
 

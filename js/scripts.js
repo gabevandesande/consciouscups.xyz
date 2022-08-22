@@ -6,9 +6,9 @@ const wait = (delay = 0) =>
     new Promise(resolve => setTimeout(resolve, delay));
 
 const setVisible = (elementOrSelector, visible) =>
-    (typeof elementOrSelector === 'string'
-        ? document.querySelector(elementOrSelector)
-        : elementOrSelector
+    (typeof elementOrSelector === 'string' ?
+        document.querySelector(elementOrSelector) :
+        elementOrSelector
     ).style.display = visible ? 'block' : 'none';
 
 setVisible('.pic', false);
@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () =>
 
     }));
 
-    
+
 
 
 function bgImgResize() {
     $('body').css("height", window.innerHeight + 'px')
-    xTrans = (window.innerWidth - $('#vidItself').width())/2 + "px" 
-    console.log( $('#vidItself').width())
+    xTrans = (window.innerWidth - $('#vidItself').width()) / 2 + "px"
+    console.log($('#vidItself').width())
     console.log(xTrans)
-    yTrans = (window.innerHeight - $('#vidItself').height())/2 + "px" 
+    yTrans = (window.innerHeight - $('#vidItself').height()) / 2 + "px"
     console.log(yTrans)
     $('#vidItself').css('transform', 'translate(' + xTrans + ', ' + yTrans + ')')
     bgImgProp = 1.94197031
@@ -166,19 +166,24 @@ $('#mute-btn-mobile').click(function () {
 })
 
 //Unmute 2
+$('#btnJoin').click(function () {
+    window.open(
+        'https://shor.by/consciouscups',
+        '_blank'
+    );
 
+})
 
 
 //Spotlight toggle
-$('#dis-spotlight-btn').click(function (){
+$('#dis-spotlight-btn').click(function () {
     spotlightEnabled = true;
     $('#dis-spotlight-btn').hide()
     $('#spotlight-btn').show()
 })
 
-$('#spotlight-btn').click(function (){
+$('#spotlight-btn').click(function () {
     spotlightEnabled = false;
     $('#spotlight-btn').hide()
     $('#dis-spotlight-btn').show()
 })
-
