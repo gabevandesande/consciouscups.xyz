@@ -16,8 +16,11 @@ setVisible('#loading', true);
 
 document.addEventListener('DOMContentLoaded', () =>
     wait(4000).then(() => {
-        setVisible('.pic', true);
-        setVisible('#loading', false);
+        $('#loading').fadeOut('slow', function () {
+            setVisible('.pic', true);
+
+        });
+        // setVisible('.pic', true);
         bgImgResize();
 
     }));
@@ -121,10 +124,6 @@ if ($(window).width() > 820) {
 
     $('.social-container').mouseleave(function () {
         $('.social-container').hide()
-    });
-} else {
-    $('.btn-join').click(function () {
-        $('.social-container-mobile').show()
     });
 }
 
