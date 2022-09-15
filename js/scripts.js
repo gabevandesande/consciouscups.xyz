@@ -16,8 +16,8 @@ setVisible('#loading', true);
 
 document.addEventListener('DOMContentLoaded', () =>
     wait(4000).then(() => {
-        $('#loading').fadeOut('slow', function () {
-            setVisible('.pic', true);
+        $('#loading').fadeOut('fast', function () {
+            $('.pic').fadeIn('fast')
 
         });
         // setVisible('.pic', true);
