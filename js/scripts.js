@@ -117,15 +117,15 @@ if ($(window).width() > 820) {
 }
 
 // Join hover effects
-if ($(window).width() > 820) {
-    $('.btn-join').hover(function () {
-        $('.social-container').show()
-    });
+// if ($(window).width() > 820) {
+//     $('.btn-join').hover(function () {
+//         $('.social-container').show()
+//     });
 
-    $('.social-container').mouseleave(function () {
-        $('.social-container').hide()
-    });
-}
+//     $('.social-container').mouseleave(function () {
+//         $('.social-container').hide()
+//     });
+// }
 
 // Mute / unmute
 var firstMute = true;
@@ -164,14 +164,21 @@ $('#mute-btn-mobile').click(function () {
     $('#unmute-btn-mobile').show();
 })
 
-//Unmute 2
 $('#btnJoin').click(function () {
     window.open(
-        'https://shor.by/consciouscups',
+        'https://twitter.com/ConsciousCups?s=20&t=r0R57NSpBVyFNH5c_C8fRw',
         '_blank'
     );
 
 })
+
+// $('#btnJoin').click(function () {
+//     window.open(
+//         'https://shor.by/consciouscups',
+//         '_blank'
+//     );
+
+// })
 
 
 //Spotlight toggle
